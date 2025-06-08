@@ -1,7 +1,7 @@
 ﻿try
 {
     var appRunner = new YtTranscript.AppRunner();
-    appRunner.Run(args);
+    await appRunner.Run(args);
 }
 catch (System.Exception)
 {

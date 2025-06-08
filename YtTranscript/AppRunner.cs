@@ -4,7 +4,7 @@ namespace YtTranscript
 {
     public class AppRunner
     {
-        public void Run(string[] args)
+        public async Task Run(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
@@ -25,7 +25,7 @@ namespace YtTranscript
             }
 
             var youTubeTranscriptRetriever = new YouTubeTranscriptRetriever(new YoutubeExplode.YoutubeClient());
-            var result = youTubeTranscriptRetriever.GetTranscriptAsync(videoId, languageCode).GetAwaiter().GetResult();
+            var result = await youTubeTranscriptRetriever.GetTranscriptAsync(videoId, languageCode);
 
             if (!string.IsNullOrEmpty(result.Error))
             {
