@@ -1,0 +1,174 @@
+# .NET C# .gitignore
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+*.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Others
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.backup
+*.mdf
+*.ldf
+*.ndf
+*.sql
+*.psess
+*.vsp
+*.pdb
+*.cache
+*.config
+*.ide
+*.sdf
+*.opensdf
+*.tlog
+*.log
+*.vsix
+*.docstates
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# DotTrace
+*.dotTrace
+
+# TeamCity
+_TeamCity*
+
+# Azure Pipelines
+.azure-pipelines/
+
+# Local history for Visual Studio
+.localhistory/
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# IIS Express
+/.vs/
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+
+# BenchmarkDotNet Artifacts
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.ipch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+*.mdf
+*.ldf
+*.ndf
+*.sql
+*.psess
+*.vsp
+*.pdb
+*.cache
+*.config
+*.ide
+*.sdf
+*.opensdf
+*.tlog
+*.log
+*.vsix
+*.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
