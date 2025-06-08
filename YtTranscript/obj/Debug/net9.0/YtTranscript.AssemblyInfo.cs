@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YtTranscript")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+242294af06b50d3b117f931bd62ee4451bee2a98")]
 [assembly: System.Reflection.AssemblyProductAttribute("YtTranscript")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YtTranscript")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

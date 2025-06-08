@@ -2,36 +2,28 @@ using YoutubeExplode;
 
 public class YouTubeTranscriptRetriever
 {
-    private readonly YoutubeClient _youtubeClient;
+    private readonly YoutubeExplode.YoutubeClient _youtubeClient;
 
-    public YouTubeTranscriptRetriever(YoutubeClient youtubeClient)
-    {
-        _youtubeClient = youtubeClient ?? throw new ArgumentNullException(nameof(youtubeClient), "YouTube client cannot be null");
-    }
+    public YouTubeTranscriptRetriever(YoutubeExplode.YoutubeClient? youtubeClient = null)
+        => _youtubeClient = youtubeClient ?? new YoutubeExplode.YoutubeClient();
 
     public async Task<(string Transcript, string Error)> GetTranscriptAsync(string videoId, string languageCode = "en")
     {
-        (string Transcript, string Error) result;
-
         try
         {
             var trackManifest = await _youtubeClient.Videos.ClosedCaptions.GetManifestAsync(videoId);
             var trackInfo = trackManifest.GetByLanguage(languageCode) ?? trackManifest.TryGetByLanguage("en");
 
             if (trackInfo == null)
-            {
-                result = ("", "No transcript available for the specified language");
-                return result;
-            }
+                return (string.Empty, "No transcript available for the specified language");
 
             var track = await _youtubeClient.Videos.ClosedCaptions.GetAsync(trackInfo);
-            result = (string.Join("", track.Captions.Select(c => c.Text)), "");
+            var transcript = string.Join(Environment.NewLine, track.Captions.Select(c => c.Text));
+            return (transcript, string.Empty);
         }
         catch (Exception ex)
         {
-            result = ("", $"Error retrieving transcript: {ex.Message}");
+            return (string.Empty, $"Failed to retrieve transcript: {ex.Message}");
         }
-
-        return result;
     }
 }
