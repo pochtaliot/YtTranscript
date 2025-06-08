@@ -6,6 +6,8 @@ namespace YtTranscript
     {
         public void Run(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             string videoId = string.Empty;
             string languageCode = "en";
             foreach (var arg in args)
