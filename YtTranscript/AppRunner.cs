@@ -33,7 +33,7 @@ public class AppRunner
             return;
         }
 
-        var cleanedTranscript = Regex.Replace(result.Transcript, @"\r\n|\n|\r|\s{2,}", " ");
+        var cleanedTranscript = Regex.Replace(result.Transcript, @"\s+", " ");
         Console.WriteLine(cleanedTranscript);
     }
 }
